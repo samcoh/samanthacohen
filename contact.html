@@ -50,7 +50,26 @@
     </header>
 
     <main class = "container" id = "skip">
-        <p> This will be my contact page with a form with a description of how to fill out the form </p>
+
+      <form action="https://formspree.io/xyyjeqrz" method="POST">
+      <fieldset>
+         <legend class = "_3D_Text">Contact Form</legend>
+         <div class = "contact_form">
+           <label for ="firstName">First Name:</label><input type="text" id ="firstName" name="firstName" placeholder="Type First Name" required/>
+           <label for ="lastName">Last Name:</label><input type="text" id="lastName" name ="lastName" placeholder="Type Last Name"  required/>
+           <label for ="email">Email:</label><input type="email" id = "email" placeholder="Type Email" required>
+           <label for = "message">Message:</label><textarea id = "message" placeholder="Type Message"></textarea>
+
+           <input class = "form_buttons" type="reset"/>
+           <input class = "form_buttons" type="submit" value=" Submit Form"/>
+         </div>
+         <!--<div>-->
+            <!--<input type="reset"/>-->
+            <!--<input type="submit" value=" Submit Form"/>-->
+         <!--</div>-->
+         </fieldset>
+         </form>
+
 
     </main>
 
@@ -62,7 +81,7 @@
       </ul>
 
       <ul id = "contact">
-        <li>Contact </li>
+        <li> Contact </li>
         <li id = link_logo><a href = "https://www.linkedin.com/in/samantha-cohen-486734137/" >Linkedin</a></li>
         <li id = git_logo><a href="https://github.com/samcoh">GitHub</a></li>
         <li id = email-logo><a href="mailto:samcoh@umich.com?">Email</a></li>

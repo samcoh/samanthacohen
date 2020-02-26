@@ -126,7 +126,7 @@ a.skip:focus{
   text-decoration-style: solid;
 }
 
-h1 a:hover, h1 a:focus{
+h1 a:hover, h1 a:focus, footer a:hover, footer a:focus, input:focus, input:hover {
   /*color: #CCCCCC;*/
     /*color: #CBB26A;*/
   color: #F5F5F5;
@@ -163,19 +163,18 @@ footer a{
   color: #212020;
 }
 
-footer a:hover, footer a:focus{
-  /*color: #CCCCCC;*/
-    /*color: #CBB26A;*/
-  color: #F5F5F5;
-  background: #212020;
-  /*text-decoration: underline;*/
+footer li{
+  /*flex-direction: column;*/
+  list-style-type: none;
+  text-align: center;
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
 
-  -webkit-text-decoration-style: dotted;
-          text-decoration-style: dotted;
 }
 #contact{
   grid-column: 3/-1;
-  text-align: left;
 
 }
 
@@ -186,32 +185,24 @@ footer a:hover, footer a:focus{
 
 
 }
-footer li{
-  /*flex-direction: column;*/
-  list-style-type: none;
-  /*align-items: center;*/
-  /*justify-content: center;*/
 
-}
 #link_logo::before{
   content: url("../images/linkedin-logo.jpg");
   padding-right: 5px;
-  position: relative;
 }
 
 #git_logo::before{
   content: url("../images/GitHub-logo.png");
   padding-right: 5px;
-  position: relative;
 
 }
 
 #email-logo::before{
     content: url("../images/email-logo.png");
     padding-right: 5px;
-    position: relative;
 
 }
+
 #location{
   grid-column: 2/ 3;
   grid-row: 1/span 1;
@@ -219,7 +210,7 @@ footer li{
   }
 
 #location li:first-child{
-  padding-left: 18px;
+  /*padding-left: 18px;*/
   padding-bottom: 10px;
   text-decoration: underline;
 
@@ -233,7 +224,7 @@ footer li{
 
 }
 #site_info li:first-child{
-  padding-left: 18px;
+  /*padding-left: 18px;*/
   padding-bottom: 10px;
   text-decoration: underline;
 
@@ -250,7 +241,7 @@ footer li{
   /*width: 100vw;*/
   /*height: 100vh;*/
   /*background-image: url("../images/data.jpg");*/
-
+  padding-top: 20px;
   margin: 20px;
 }
 
@@ -342,15 +333,56 @@ footer li{
 }
 
 
+/*contact form style sheet*/
 
-/*@media screen and (min-width: 680px){*/
-  /*body{*/
-    /*background:yellow;*/
-  /*}*/
-  /*.container{*/
-    /*grid-template-columns: 1fr 1fr;*/
-  /*}*/
-/*}*/
+fieldset{
+   border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+legend{
+  text-align: center;
+  font-size: 40px;
+}
+fieldset div{
+   border: 2px solid black;
+   margin: 2%;
+   padding: 1%;
+   border-radius: 5px;
+}
+
+.contact_form{
+  display: grid;
+  grid-row-gap: 10px;
+  grid-template-columns: 1fr;
+
+}
+
+.form_buttons{
+  margin: 0 auto;
+
+}
+
+input[type=reset], input[type=submit] {
+   border: 1px solid black;
+   width: 100px;
+   padding: 2%;
+
+   -webkit-box-sizing: content-box;
+   -moz-box-sizing: content-box;
+   box-sizing: content-box;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bolder;
+}
+input, textarea, select{
+   background-color:#FFFFFF;
+  font-size: 14px;
+}
+
+
+
+
 @media screen and (min-width: 680px){
   header{
     display: grid;
@@ -394,6 +426,18 @@ footer li{
     font-size: 50px
 
   }
+  /*make 2 columns because now can fit both on screen without looking squished */
+  .contact_form{
+    grid-template-columns: auto 1fr;
+
+}
+  .form_buttons{
+    grid-column: 1/-1;
+  }
+  input[type=reset], input[type=submit] {
+    width: 120px;
+
+  }
 }
 @media all and (min-width: 1200px) {
   header{
@@ -427,6 +471,8 @@ footer li{
     font-size: 60px
 
   }
+
+
 }
 @media screen and (prefers-reduced-motion: reduce) {
   /*#logo {*/
